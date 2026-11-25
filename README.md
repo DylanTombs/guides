@@ -4,7 +4,7 @@ Resource lists from my reels. If you commented a keyword and I sent you a link, 
 
 ```
 guides/
-├── rust/       how I'd learn Rust, in order          nov 2025
+├── rust/       how I'd learn Rust, in order          nov 2026
 └── startup/    5 free things for your startup        nov 2026
 ```
 

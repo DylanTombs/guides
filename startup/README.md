@@ -15,3 +15,11 @@ From YC, Anthropic and Harvard. All free. The cloud credits need an application,
 5. **Free cloud credits**
    - [Google for Startups](https://cloud.google.com/startup): up to $350,000 in Google Cloud credits.
    - [AWS Activate](https://aws.amazon.com/startups/credits): up to $200,000 in AWS credits.
+
+## Extras
+
+- [MIT 15.390: New Enterprises](https://ocw.mit.edu/courses/15-390-new-enterprises-spring-2013/): MIT Sloan's startup course by Bill Aulet, free on OpenCourseWare.
+- [How to Start a Startup (Stanford CS183B)](https://startupclass.github.io): Sam Altman's 2014 Stanford class.
+- [How to Get Startup Ideas](https://paulgraham.com/startupideas.html), Paul Graham.
+- [Do Things That Don't Scale](https://paulgraham.com/ds.html), Paul Graham.
+- [YC Co-Founder Matching](https://www.ycombinator.com/cofounder-matching): find a co-founder.
