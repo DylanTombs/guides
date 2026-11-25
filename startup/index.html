@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>5 free things for your startup</title>
+<meta name="description" content="Free startup resources from YC, Anthropic and Harvard, plus up to $550k in cloud credits. Every link in one place.">
+<meta property="og:title" content="5 free things for your startup">
+<meta property="og:description" content="YC Startup School, the Claude Code masterclass, gstack, Harvard's Startup Secrets and free cloud credits.">
+<meta property="og:image" content="https://dylantombs.github.io/guides/startup/og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0e0e0f">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@700&display=swap">
+<style>
+/* Layout: single centred column, title and brief, then one numbered card per resource. Dark neutral, yellow accent from the carousel highlight. */
+:root{
+  color-scheme:dark;
+  --bg:#0e0e0f; --surface:#18181a; --surface-hi:#222225; --line:#2e2e32;
+  --fg:#f4f4f5; --muted:#a1a1aa; --accent:#f2dc6b; --accent-2:#f7e89a; --on-accent:#141204; --hl:#f2dc6b;
+  --font-display:"Inter Tight",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.55;margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+main{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2{font-family:var(--font-display);font-weight:700;text-wrap:balance;margin:0;line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,8vw,3rem)}
+h1 span{color:var(--hl);text-decoration:underline;text-decoration-thickness:.06em;text-underline-offset:.14em}
+h2{font-size:1.5rem}
+p{margin:0}
+.hero{display:flex;flex-direction:column;gap:20px}
+.brief{color:var(--muted);font-size:1.0625rem;max-width:65ch}
+.brief strong{color:var(--fg);font-weight:600}
+section{display:flex;flex-direction:column;gap:14px}
+.sub{color:var(--muted)}
+ol,ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.card{display:flex;gap:14px;align-items:flex-start;min-width:0;padding:16px;background:var(--surface);
+  border:1px solid var(--line);border-radius:12px;color:inherit;text-decoration:none;min-height:56px;transition:border-color .15s,background .15s}
+.card:hover{border-color:var(--accent);background:var(--surface-hi)}
+.card:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--on-accent);
+  font:700 .95rem var(--font-display);display:grid;place-items:center}
+.body{min-width:0;flex:1;display:flex;flex-direction:column;gap:4px}
+.title{font-weight:600;overflow-wrap:anywhere}
+.who{color:var(--accent-2);font-size:.875rem;font-weight:500}
+.desc{color:var(--muted);font-size:.9375rem}
+.arrow{flex:none;color:var(--accent);font-size:1.2rem;line-height:1.4}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+.pair .card{padding:12px 14px;min-height:0;background:var(--surface-hi)}
+@media (max-width:420px){.pair{grid-template-columns:1fr}}
+footer{color:var(--muted);font-size:.9375rem;border-top:1px solid var(--line);padding-top:20px}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1>5 free things for your startup from <span>YC, Anthropic &amp; Harvard</span></h1>
+    <p class="brief">Everything from the post, in order. <strong>All of it is free.</strong> The cloud credits need you to apply, and Startup School needs you to request a spot.</p>
+  </header>
+
+  <section>
+    <h2>The list</h2>
+    <ol>
+      <li><a class="card" href="https://events.ycombinator.com/startup-school-europe-2027" target="_blank" rel="noopener noreferrer"><span class="num">1</span><span class="body"><span class="title">Startup School Europe</span><span class="who">Y Combinator · London, 6 February 2027</span><span class="desc">A day of talks and sessions with YC partners. Paul Graham and Garry Tan are on the speaker list. You don't need a startup yet, just apply for a spot early.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://www.youtube.com/watch?v=6eBSHbLKuN0" target="_blank" rel="noopener noreferrer"><span class="num">2</span><span class="body"><span class="title">Mastering Claude Code in 30 minutes</span><span class="who">Boris Cherny · Anthropic</span><span class="desc">The person who created Claude Code shows the shortcuts and workflows he uses. Free on YouTube. Watch it before you build your MVP.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://github.com/garrytan/gstack" target="_blank" rel="noopener noreferrer"><span class="num">3</span><span class="body"><span class="title">gstack</span><span class="who">Garry Tan · President &amp; CEO of YC</span><span class="desc">His open source Claude Code setup. It turns one agent into a team: CEO, eng manager, designer, reviewer, QA and release engineer. MIT licence.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://cosmolearning.org/courses/startup-secrets-with-michael-skok-at-harvard-i-lab/video-lectures" target="_blank" rel="noopener noreferrer"><span class="num">4</span><span class="body"><span class="title">Startup Secrets</span><span class="who">Michael Skok · Harvard Innovation Labs</span><span class="desc">The i-lab's lecture series on building a startup, from pitching to competitive advantage. Every lecture in one list.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li class="card" style="display:block"><span style="display:flex;gap:14px;align-items:flex-start"><span class="num">5</span><span class="body"><span class="title">Free cloud credits</span><span class="who">Google for Startups · AWS Activate</span><span class="desc">Google Cloud gives startups up to $350,000 in credits. AWS Activate gives up to $200,000. Apply before you pay for a single server.</span></span></span>
+        <span class="pair">
+          <a class="card" href="https://cloud.google.com/startup" target="_blank" rel="noopener noreferrer"><span class="body"><span class="title">Google for Startups</span></span><span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="card" href="https://aws.amazon.com/startups/credits" target="_blank" rel="noopener noreferrer"><span class="body"><span class="title">AWS Activate</span></span><span class="arrow" aria-hidden="true">↗</span></a>
+        </span>
+      </li>
+    </ol>
+  </section>
+
+  <footer>This is Dylan's free guide. Nothing to sign up for.</footer>
+</main>
+</body>
+</html>
