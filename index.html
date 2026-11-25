@@ -1,4 +1,56 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Guides</title><meta http-equiv="refresh" content="0; url=rust/"></head>
-<body><a href="rust/">Rust guide</a></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>guides: free learning guides</title>
+<meta name="description" content="Free learning guides from my reels: what to learn, in what order, and what to build.">
+<meta property="og:title" content="guides: free learning guides">
+<meta property="og:description" content="What to learn, in what order, and what to build. Free, no sign-up.">
+<meta property="og:image" content="https://dylantombs.github.io/guides/assets/banner.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#120d0c">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#120d0c;--surface:#1d1514;--surface-hi:#2a1b18;--line:#3a2622;--fg:#f4ebe7;--muted:#b9a59e;--accent:#f0553a;--accent-2:#ff8a4c}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Inter,system-ui,sans-serif;padding:32px max(16px,env(safe-area-inset-left,0px)) 48px}
+main{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+.k{font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-2)}
+h1{font:700 clamp(3rem,14vw,5rem)/.95 "Space Grotesk",system-ui,sans-serif;letter-spacing:-.03em;margin:8px 0 0}
+h1 span{color:var(--accent)}
+.lead{color:var(--muted);font-size:1.1rem;margin:0}
+.card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;color:inherit;text-decoration:none;transition:border-color .15s,background .15s}
+.card:hover{border-color:var(--accent);background:var(--surface-hi)}
+.card:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+.card img{width:100%;height:auto;display:block;border-bottom:1px solid var(--line)}
+.card .b{padding:16px 18px;display:flex;flex-direction:column;gap:4px}
+.card h2{font:700 1.35rem "Space Grotesk",system-ui,sans-serif;margin:0}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.go{color:var(--accent);font-weight:600;margin-top:6px}
+.soon{color:var(--muted);font-size:.95rem;border:1px dashed var(--line);border-radius:14px;padding:16px 18px;text-align:center}
+footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--line);padding-top:18px}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="k">Free · No sign-up</div>
+    <h1>guides<span>.</span></h1>
+  </header>
+  <p class="lead">Learning guides from my reels: what to learn, in what order, and what to build.</p>
+  <a class="card" href="rust/">
+    <img src="rust/crab-terminal.jpg" alt="A terminal showing the Rust repository as a red ASCII crab" width="1200" height="762">
+    <span class="b">
+      <h2>🦀 How do I learn Rust?</h2>
+      <p>Why Rust, what to learn in order, and three projects to build, from a 15-minute CLI to your own OS.</p>
+      <span class="go">Open the guide →</span>
+    </span>
+  </a>
+  <div class="soon">More guides on the way.</div>
+  <footer>Free guides. Nothing to sign up for.</footer>
+</main>
+</body>
+</html>
