@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How do I learn Rust? I got you 🦀</title>
+<meta name="description" content="Free Rust guide: why Rust, what to learn in order, and three projects to build.">
+<meta property="og:title" content="How do I learn Rust? I got you 🦀">
+<meta property="og:description" content="Why Rust, what to learn in order, and three projects to build. Free.">
+<meta property="og:image" content="https://dylantombs.github.io/guides/rust/crab-terminal.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#120d0c">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap">
+<style>
+/* Layout: single centred column, hero image first, then stacked tappable resource cards. Dark-only, rust red accents. */
+:root{
+  color-scheme:dark;
+  --bg:#120d0c; --surface:#1d1514; --surface-hi:#2a1b18; --line:#3a2622;
+  --fg:#f4ebe7; --muted:#b9a59e; --accent:#f0553a; --accent-2:#ff8a4c; --on-accent:#1a0c08;
+  --font-display:"Space Grotesk",system-ui,sans-serif; --font-body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 48px}
+main{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+h1,h2{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(2rem,8vw,3.2rem);font-weight:700}
+h1 span{color:var(--accent)}
+h2{font-size:1.5rem;font-weight:700}
+p{margin:0}
+.hero{display:flex;flex-direction:column;gap:20px}
+.hero img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+.brief{color:var(--muted);font-size:1.0625rem;max-width:65ch}
+.brief strong{color:var(--fg);font-weight:600}
+section{display:flex;flex-direction:column;gap:14px}
+.sub{color:var(--muted)}
+ul,ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.card{display:flex;gap:14px;align-items:flex-start;min-width:0;padding:16px;background:var(--surface);
+  border:1px solid var(--line);border-radius:12px;color:inherit;text-decoration:none;min-height:56px;transition:border-color .15s,background .15s}
+.card:hover{border-color:var(--accent);background:var(--surface-hi)}
+.card:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+.num{flex:none;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--on-accent);
+  font:700 .95rem var(--font-display);display:grid;place-items:center}
+.body{min-width:0;flex:1;display:flex;flex-direction:column;gap:4px}
+.title{font-weight:600;overflow-wrap:anywhere}
+.desc{color:var(--muted);font-size:.9375rem}
+.tag{align-self:flex-start;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600;
+  color:var(--accent-2);border:1px solid var(--accent);border-radius:999px;padding:1px 10px;margin-top:4px}
+.arrow{flex:none;color:var(--accent);font-size:1.2rem;line-height:1.4}
+.try{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.try .desc{color:var(--on-accent)} .try .arrow{color:var(--on-accent)}
+.try:hover{background:var(--accent-2);border-color:var(--accent-2)}
+.credit{color:var(--muted);font-size:.8125rem;margin-top:-12px}
+.credit a{color:inherit}
+footer{color:var(--muted);font-size:.9375rem;border-top:1px solid var(--line);padding-top:20px}
+@media (prefers-reduced-motion:reduce){.card{transition:none}}
+</style>
+
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1>How do I learn <span>Rust</span>? I got you. 🦀</h1>
+    <img src="crab-terminal.jpg" alt="A terminal showing the Rust repository as a red ASCII crab" width="1200" height="762">
+    <p class="credit">Image: <a href="https://medium.com/codex/rust-101-everything-you-need-to-know-about-rust-f3dd0ae99f4c" target="_blank" rel="noopener noreferrer">Rust 101</a></p>
+    <p class="brief">Rust is a programming language built to be fast without the memory bugs that C and C++ are known for. Google's Android team reports <strong>1000x lower memory-safety vulnerability density</strong> in Rust than in their C/C++ (Google security blog, Nov 2025). Discord rewrote a service from Go to Rust to get rid of garbage-collector latency spikes (2020).</p>
+  </header>
+
+  <section>
+    <h2>Why Rust</h2>
+    <p class="sub">Read or watch one of these first if you want the case for it.</p>
+    <ul>
+      <li><a class="card" href="https://blog.google/security/rust-in-android-move-fast-fix-things/" target="_blank" rel="noopener noreferrer"><span class="body"><span class="title">Google: Rust in Android</span><span class="desc">How 1000x fewer memory bugs looks in a real codebase.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://discord.com/blog/why-discord-is-switching-from-go-to-rust" target="_blank" rel="noopener noreferrer"><span class="body"><span class="title">Why Discord switched from Go to Rust</span><span class="desc">What happened when garbage collection caused latency spikes.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://chariotsolutions.com/screencast/philly-ete-2019-carol-nichols-rust-a-language-for-the-next-40-years/" target="_blank" rel="noopener noreferrer"><span class="body"><span class="title">Rust: a language for the next 40 years</span><span class="desc">A talk by Carol Nichols, co-author of the Rust Book.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Learn it, in this order</h2>
+    <ol>
+      <li><a class="card" href="https://medium.com/codex/rust-101-everything-you-need-to-know-about-rust-f3dd0ae99f4c" target="_blank" rel="noopener noreferrer"><span class="num">1</span><span class="body"><span class="title">Rust 101</span><span class="desc">A 9-minute overview, so the rest makes sense.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://doc.rust-lang.org/book/" target="_blank" rel="noopener noreferrer"><span class="num">2</span><span class="body"><span class="title">The Rust Book, chapters 1-8</span><span class="desc">The core of the language, explained properly and for free.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://github.com/rust-lang/rustlings" target="_blank" rel="noopener noreferrer"><span class="num">3</span><span class="body"><span class="title">Rustlings</span><span class="desc">Small exercises to do alongside the book, so you practise as you read.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://google.github.io/comprehensive-rust/" target="_blank" rel="noopener noreferrer"><span class="num">4</span><span class="body"><span class="title">Google's Comprehensive Rust</span><span class="desc">The course Google uses internally to teach Rust to its engineers.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://microsoft.github.io/RustTraining/" target="_blank" rel="noopener noreferrer"><span class="num">5</span><span class="body"><span class="title">Microsoft's RustTraining books</span><span class="desc">Free books that bridge to Rust if you already know Python, C# or C++.</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Then build</h2>
+    <p class="sub">Easiest first.</p>
+    <ol>
+      <li><a class="card" href="https://rust-cli.github.io/book/tutorial/index.html" target="_blank" rel="noopener noreferrer"><span class="num">1</span><span class="body"><span class="title">Your own grep</span><span class="desc">Search files from the terminal. A command line app in about 15 minutes.</span><span class="tag">Easy</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://doc.rust-lang.org/book/ch21-00-final-project-a-web-server.html" target="_blank" rel="noopener noreferrer"><span class="num">2</span><span class="body"><span class="title">A multithreaded web server</span><span class="desc">The final project of the Rust Book. You handle several requests at once.</span><span class="tag">Medium</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+      <li><a class="card" href="https://os.phil-opp.com/" target="_blank" rel="noopener noreferrer"><span class="num">3</span><span class="body"><span class="title">Your own operating system</span><span class="desc">A free blog series that builds a small OS step by step.</span><span class="tag">Hard</span></span><span class="arrow" aria-hidden="true">↗</span></a></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Try it now</h2>
+    <a class="card try" href="https://play.rust-lang.org/" target="_blank" rel="noopener noreferrer"><span class="body"><span class="title">Rust Playground</span><span class="desc">Write and run Rust in your browser. No install.</span></span><span class="arrow" aria-hidden="true">↗</span></a>
+  </section>
+
+  <footer>This is Dylan's free guide. Nothing to sign up for.</footer>
+</main>
+</body>
+</html>
